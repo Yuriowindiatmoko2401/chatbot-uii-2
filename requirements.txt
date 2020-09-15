@@ -106,7 +106,7 @@ pytz==2019.1
 PyYAML==5.3.1
 questionary==1.1.1
 # Editable install with no version control (rasa==1.6.0a1)
--e /Users/yurio/Kuliah/thesis_mania/prototyping_mania/rasa-1.6.0a1
+# -e /home/yurio/mainan_yurio/chatbot_to_icitda
 rasa-sdk==1.5.2
 redis==3.3.5
 requests==2.22.0
