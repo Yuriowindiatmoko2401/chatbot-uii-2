@@ -3,8 +3,11 @@ intents:
   - intent_salam
   - intent_berpisah
   - terima_kasih
+  - intent_minta_daftar_nilai
   - intent_minta_jadwal_saja
   - intent_minta_jadwal
+  - intent_prediksi_cuaca
+  - intent_jadwal_sholat
   - intent_setuju
   - intent_menolak
   - mood_baik
@@ -25,6 +28,9 @@ actions:
 
 entities:
 - konsentrasi
+- kota
+- nama
+- NIM
 
 slots:
   konsentrasi:

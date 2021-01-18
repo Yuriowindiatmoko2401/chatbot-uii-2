@@ -27,6 +27,18 @@
 - minta jadwalnya 
 - mas jadwal
 
+## intent:intent_minta_daftar_nilai
+- mau tau nilai saya
+- nilai saya dong
+- nilai saya
+- nilai [19917003](NIM)
+- nilai [19917020](NIM)
+- nilai [19917012](NIM)
+- nilai [fahmi nurrahim](nama)
+- nilai [yurio windiatmoko](nama)
+- nilai [prastyo eko susanto](nama)
+- nilai [malik abdul aziz](nama)
+
 ## intent:intent_minta_jadwal
 - Minta jadwal untuk [Data Science](konsentrasi)
 - Tolong jadwalnya untuk [Data Science](konsentrasi)
@@ -128,6 +140,26 @@
 - Jadwal [sie](konsentrasi)
 - Minta jadwal dong untuk [sie](konsentrasi)
 - [sie](konsentrasi)
+
+## intent:intent_prediksi_cuaca
+- prediksi cuaca hari ini dong
+- cuaca [yogyakarta](kota)
+- cuaca [jogjakarta](kota)
+- cuaca [jogja](kota)
+- cuaca [yogya](kota)
+
+## intent:intent_jadwal_sholat
+- boleh minta jadwal sholat
+- minta jadwal sholat dong
+- minta jadwal sholat
+- jadwal sholat [yogyakarta](kota)
+- jadwal sholat [jogjakarta](kota)
+- jadwal sholat [jogja](kota)
+- jadwal sholat [yogya](kota)
+- jadwal slt [yogyakarta](kota)
+- jadwal slt [jogjakarta](kota)
+- jadwal slt [jogja](kota)
+- jadwal slt [yogya](kota)
 
 ## intent:intent_setuju
 - oke
