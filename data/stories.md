@@ -2,10 +2,6 @@
 * intent_menyapa
   - utter_menyapa
 
-## story belanja
-* intent_sku
-  - utter_mau_berapa_uom
-
 ## story salam
 * intent_salam
   - utter_membalas_salam

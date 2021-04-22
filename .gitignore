@@ -21,3 +21,5 @@ paper_misc/confusion_matric_action.png
 paper_misc/precision_formula.png
 paper_misc/recall_formula.jpeg
 results/
+
+rasa_core.log
