@@ -85,6 +85,7 @@ opencv-python==4.3.0.36
 opt-einsum==3.2.1
 packaging==19.0
 pandas==1.2.4
+petl==1.7.4
 pika==1.0.1
 Pillow==7.2.0
 promise==2.3
