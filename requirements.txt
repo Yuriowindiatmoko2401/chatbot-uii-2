@@ -115,7 +115,7 @@ pika==1.0.1
 Pillow==7.2.0
 prometheus-client @ file:///tmp/build/80754af9/prometheus_client_1618088486455/work
 promise==2.3
-prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1616415428029/work
+prompt-toolkit==2.0.10
 protobuf==3.12.2
 psycopg2-binary==2.8.2
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
@@ -143,7 +143,7 @@ python-telegram-bot==11.1.0
 pytz==2019.1
 PyYAML==5.3.1
 pyzmq==20.0.0
-questionary==1.1.1
+questionary==1.4.0
 rasa==1.1.4
 rasa-sdk==1.1.1
 redis==3.3.5
