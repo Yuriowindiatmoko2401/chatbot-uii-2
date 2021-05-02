@@ -115,13 +115,13 @@ class ActionJadwalSholat(Action):
 
 		results_id = results[0][0]
 
-	    url = 'https://api.banghasan.com/sholat/format/json/jadwal/kota/{kota_id}/tanggal/{date_now}'.format(kota_id=results_id,date_now=datetime.strftime(datetime.now(),"%Y-%m-%d"))
+		url = 'https://api.banghasan.com/sholat/format/json/jadwal/kota/{kota_id}/tanggal/{date_now}'.format(kota_id=results_id,date_now=datetime.strftime(datetime.now(),"%Y-%m-%d"))
 
-	    header = {'Content-Type': 'application/json'}
+		header = {'Content-Type': 'application/json'}
 
-	    response = requests.get(url, headers=header)
+		response = requests.get(url, headers=header)
 
-	    results = response.json()
+		results = response.json()
 
 		msg_id = str(results['jadwal']['data']).replace("{","").replace("}","").replace(', ','\n').replace("'","")
 
@@ -154,16 +154,20 @@ class ActionPredCuaca(Action):
 
 		if len(results_kawasan.split()) > 1:
 			kawasan_req = "%20".join(results_kawasan.split())
+		else:
+			kawasan_req = results_kawasan
 
-	    url = 'http://api.openweathermap.org/data/2.5/weather?q={kawasan},id&APPID={app_id}&units=metric'.format(kawasan=kawasan_req,app_id='9926258e5fbe65eb74b1eb220416b8d2')
+		url = 'http://api.openweathermap.org/data/2.5/weather?q={kawasan},id&APPID={app_id}&units=metric'.format(kawasan=kawasan_req,app_id='9926258e5fbe65eb74b1eb220416b8d2')
 
-	    header = {'Content-Type': 'application/json'}
+		header = {'Content-Type': 'application/json'}
 
-	    response = requests.get(url, headers=header)
+		response = requests.get(url, headers=header)
 
-	    results = response.json()
+		results = response.json()
 
 		msg_en = results['weather'][0]['description']
+
+		global translator
 
 		msg_id = translator.translate(msg_en, src='en', dest='id').text
 

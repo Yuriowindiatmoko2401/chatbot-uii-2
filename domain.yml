@@ -91,13 +91,13 @@ templates:
   utter_tanya_nama_atau_nim:
   - text: "boleh tau nama lengkap atau NIM nya ?"
   - text: "tolong dong nama lengkap atau NIM nya ?"
-  - text: "tuliskan nama lengkap atau NIM nya ?”
-  - text: "minta nama lengkap atau NIM nya dong :)”
+  - text: "tuliskan nama lengkap atau NIM nya ?"
+  - text: "minta nama lengkap atau NIM nya dong :)"
 
   utter_tanya_kota:
   - text: "boleh tau kota atau kabupatennya dimana ?"
   - text: "dari kota mana ya ?"
-  - text: " tinggalnya dimana ?”
+  - text: "tinggalnya dimana ?"
 
 session_config:
   session_expiration_time: 60
