@@ -82,5 +82,26 @@
 * terima_kasih
   - utter_terima_kasih
 
+## story minta nilai
+* intent_salam
+  - utter_membalas_salam
+* intent_minta_daftar_nilai
+  - utter_tanya_nama_atau_nim
+* intent_confirm_nama_atau_nim
+  - action_daftar_nilai
+* terima_kasih
+  - utter_terima_kasih
+
+## story minta jadwal sholat
+* intent_jadwal_sholat
+  - utter_tanya_kota
+* intent_confirm_kota
+  - action_jadwal_sholat
+
+## story minta prediksi cuaca
+* intent_prediksi_cuaca
+  - utter_tanya_kota
+* intent_confirm_kota
+  - action_pred_cuaca
 
   
