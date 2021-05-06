@@ -2,7 +2,7 @@
 version: '3'
 services:
   rasa:
-    image: rasa-chatbot-uii-1:v.0.1
+    image: rasa-chatbot-uii-1:v.0.3
     ports:
       - "5002:5002"
       - "5005:5005"
@@ -19,7 +19,9 @@ services:
       - --cors 
       - "*"
   action_server:
-    image: rasa-chatbot-uii-1:v.0.1
+    image: rasa-chatbot-uii-1:v.0.3
+    environment:
+      - MYSQL_HOST=some-mariadb
     ports:
       - "5055:5055"
     depends_on:

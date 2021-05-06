@@ -14,7 +14,7 @@ from datetime import datetime
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import pymysql
-import requests
+import requests, os
 
 
 translator = Translator()                  
@@ -29,7 +29,7 @@ class ActionDaftarJadwal(Action):
 	tracker: Tracker,
 	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-		conn = pymysql.connect(host='127.0.0.1',user='root',database='chatbot_uii',port=3306,connect_timeout=5)
+		conn = pymysql.connect(host=os.environ.get('MYSQL_HOST'),user='root',database='chatbot_uii',port=3306,connect_timeout=5)
 		mycursor = conn.cursor()
 
 		konsentrasi = tracker.get_slot("konsentrasi")
@@ -61,7 +61,7 @@ class ActionDaftarNilai(Action):
 	tracker: Tracker,
 	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-		conn = pymysql.connect(host='127.0.0.1',user='root',database='chatbot_uii',port=3306,connect_timeout=5)
+		conn = pymysql.connect(host=os.environ.get('MYSQL_HOST'),user='root',database='chatbot_uii',port=3306,connect_timeout=5)
 		mycursor = conn.cursor()
 
 		try:
@@ -102,7 +102,7 @@ class ActionJadwalSholat(Action):
 	tracker: Tracker,
 	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-		conn = pymysql.connect(host='127.0.0.1',user='root',database='chatbot_uii',port=3306,connect_timeout=5)
+		conn = pymysql.connect(host=os.environ.get('MYSQL_HOST'),user='root',database='chatbot_uii',port=3306,connect_timeout=5)
 		mycursor = conn.cursor()
 
 		kawasan = tracker.get_slot("kota")
@@ -139,7 +139,7 @@ class ActionPredCuaca(Action):
 	tracker: Tracker,
 	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-		conn = pymysql.connect(host='127.0.0.1',user='root',database='chatbot_uii',port=3306,connect_timeout=5)
+		conn = pymysql.connect(host=os.environ.get('MYSQL_HOST'),user='root',database='chatbot_uii',port=3306,connect_timeout=5)
 		mycursor = conn.cursor()
 
 		kawasan = tracker.get_slot("kota")
