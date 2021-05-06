@@ -1,0 +1,38 @@
+# docker-compose up --exit-code-from elasticsearch_tester
+version: '3'
+services:
+  rasa:
+    image: rasa-chatbot-uii-1:v.0.1
+    ports:
+      - "5005:5005"
+    depends_on:
+      - action_server
+    command:
+      - rasa 
+      - run 
+      - --endpoints 
+      - endpoints.yml 
+      - --credentials 
+      - credentials.yml 
+      - --cors 
+      - "*"
+  action_server:
+    image: rasa-chatbot-uii-1:v.0.1
+    ports:
+      - "5055:5055"
+    depends_on:
+      - some-mariadb
+    command:
+      - rasa 
+      - run 
+      - actions 
+      - --actions 
+      - actions
+  some-mariadb:
+    image: mariadb 
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
