@@ -12,12 +12,12 @@ services:
     command:
       - rasa 
       - run 
-      - --endpoints 
-      - endpoints.yml 
-      - --credentials 
-      - credentials.yml 
+      - --enable-api 
       - --cors 
-      - "*"
+      - "*" 
+      - --port 
+      - "5005" 
+      - --debug
   action_server:
     image: rasa-chatbot-uii-1:v.0.3
     environment:
@@ -30,8 +30,9 @@ services:
       - rasa 
       - run 
       - actions 
-      - --actions 
-      - actions
+      - --port 
+      - "5055" 
+      - --debug
   some-mariadb:
     image: mariadb 
     environment:
