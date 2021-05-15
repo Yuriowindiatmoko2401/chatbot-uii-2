@@ -1,0 +1,10 @@
+[
+  {
+    "text": "assalamu alaikum",
+    "intent": "intent_menyapa",
+    "intent_prediction": {
+      "name": "intent_salam",
+      "confidence": 0.7561402320861816
+    }
+  }
+]
