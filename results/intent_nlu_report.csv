@@ -1,0 +1,6 @@
+,intent_setuju,intent_minta_jadwal,intent_berpisah,intent_salam,mood_tidak_senang,intent_minta_jadwal_saja,intent_prediksi_cuaca,intent_jadwal_sholat,mood_baik,intent_menyapa,terima_kasih,intent_minta_daftar_nilai,intent_menolak,menantang_bot,micro avg,macro avg,weighted avg
+precision,1.0,1.0,1.0,0.75,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.9939393939393939,0.9821428571428571,0.9954545454545455
+recall,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.8571428571428571,1.0,1.0,1.0,1.0,0.9939393939393939,0.9897959183673469,0.9939393939393939
+f1-score,1.0,1.0,1.0,0.8571428571428571,1.0,1.0,1.0,1.0,1.0,0.923076923076923,1.0,1.0,1.0,1.0,0.9939393939393939,0.9843014128728415,0.9941391941391939
+support,6,100,3,3,3,4,5,11,4,7,2,10,3,4,165.0,165.0,165.0
+confused_with,{},{},{},{},{},{},{},{},{},{'intent_salam': 1},{},{},{},{},,,

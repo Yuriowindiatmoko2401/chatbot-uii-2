@@ -1,0 +1,5 @@
+,nama,konsentrasi,kota,NIM,micro avg,macro avg,weighted avg
+precision,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+recall,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+f1-score,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+support,10.0,170.0,12.0,3.0,195.0,195.0,195.0
