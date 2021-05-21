@@ -2,7 +2,7 @@
 version: '3'
 services:
   rasa:
-    image: yuriowindiatmoko2401/rasa-chatbot-uii-1:v.0.3
+    image: yuriowindiatmoko2401/rasa-chatbot-uii-1:v.0.4
     ports:
       - "5002:5002"
       - "5005:5005"
@@ -12,6 +12,8 @@ services:
     command:
       - rasa 
       - run 
+      - --model
+      - /usr/workspace/models/GRU_128_rnn_size.tar.gz
       - --enable-api 
       - --cors 
       - "*" 
@@ -19,7 +21,7 @@ services:
       - "5005" 
       - --debug
   action_server:
-    image: yuriowindiatmoko2401/rasa-chatbot-uii-1:v.0.3
+    image: yuriowindiatmoko2401/rasa-chatbot-uii-1:v.0.4
     environment:
       - MYSQL_HOST=some-mariadb
     ports:
