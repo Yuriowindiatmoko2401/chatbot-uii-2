@@ -51,10 +51,10 @@ h2==3.2.0
 h5py==2.10.0
 hpack==3.0.0
 hstspreload==2020.12.22
-httpcore==0.9.1
+# httpcore==0.9.1
 httplib2==0.18.1
 httptools==0.1.1
-httpx==0.13.3
+# httpx==0.13.3
 humanfriendly==8.2
 hyperframe==5.2.0
 idna==2.8
@@ -114,7 +114,7 @@ rasa==1.1.4
 rasa-sdk==1.1.1
 redis==3.3.5
 requests==2.22.0
-requests-async==0.5.0
+# requests-async==0.5.0
 requests-toolbelt==0.9.1
 rfc3986==1.4.0
 rocketchat-API==0.6.31

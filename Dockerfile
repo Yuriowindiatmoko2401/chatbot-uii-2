@@ -9,11 +9,10 @@ RUN apt-get install -y libssl-dev curl
 # copy requirements file
 COPY . /usr/workspace
 
-COPY ./models/GRU_128_rnn_size.tar.gz /usr/workspace/models/GRU_128_rnn_size.tar.gz
-
 WORKDIR /usr/workspace
 RUN pip install -r requirements.txt
 
-# RUN rasa train -vv --dump-stories --force --debug
+RUN pip install Jinja2==3.0.3
 
-WORKDIR /usr/workspace
+EXPOSE 5002 5005 5055
+# ENTRYPOINT ["/usr/workspace/entrypoint.sh"]

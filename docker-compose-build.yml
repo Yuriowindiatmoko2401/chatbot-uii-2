@@ -1,0 +1,39 @@
+version: "2"
+
+services:
+  rasa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: ./entrypoint.sh
+    ports:
+      - "5002:5002"
+      - "5005:5005"
+      # http://localhost:5002/api
+    depends_on:
+      - action_server
+    env_file:
+      - .env
+    container_name: rasa-wrapper
+
+  action_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: ./action_entrypoint.sh
+    container_name: action_server
+    environment:
+      - MYSQL_HOST=some-mariadb
+    ports:
+      - "5055:5055"
+    depends_on:
+      - some-mariadb
+
+  some-mariadb:
+    image: mariadb 
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
