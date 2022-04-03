@@ -21,7 +21,6 @@ paper_misc/confusion_matric_action.png
 paper_misc/precision_formula.png
 paper_misc/recall_formula.jpeg
 
-
 rasa_core.log
 models/
 
@@ -31,3 +30,5 @@ mariadb/ib_buffer_pool
 mariadb/ib_logfile0
 mariadb/ibdata1
 mariadb/ibtmp1
+
+.venv
